@@ -1,2 +1,2 @@
 # manaaralam.github.io
-Personal Website
+Personal Academic Website
