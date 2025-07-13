@@ -1,276 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Manaar Alam</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="css/bootstrap.css" rel="stylesheet">
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/menucollapse.js"></script>
-<script type="text/javascript" src="js/arrow78.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript" src="js/manaar.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manaar Alam</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="js/rotate.js"></script>
+</head>
 
-<body id="page-top" class="index">
+<body class="bg-white text-gray-800 font-sans leading-relaxed tracking-wide">
 
-<!-- Home Section -->
-<section id="home" style="margin-top:40px">
-	<div class="container">
-		<div align="left" class="col-md-3">
-			<img id="mobile-img" src="images/manaar.jpg" width="250" border="0" height="250" alt="" class="img-rounded"></a>
-		</div>
-		<div align="left" class="col-md-5">
-			<h3>Manaar Alam</h3>
-			<h4>Post-Doctoral Associate<br>
-			        Modern Microprocessors Architecture Lab<br>
-				Center for Cyber Security<br>
-				New York University Abu Dhabi<br>
-				Abu Dhabi, United Arab Emirates<br><br>
-				<i class="fa fa-envelope-square"></i> &nbsp; alam [dot] manaar [at] nyu [dot] edu</br>
-			</h4>
-		</div>
-		<div align="left" class="col-md-5">
-			<h4><b>Research Interest: </b>
-		<span class="txt-rotate" data-period="2000" data-rotate='[ "Deep Learning Security", "System Security", "Hardware Security", "Micro-architectural Security"]'></span>
-		</h4>
-		</div>
-	</div>
-</section>
-
-<!-- Introduction Section -->
-<section id="intro">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <p>I am a Post-Doctoral Associate at <a target="_blank" href="https://nyuad.nyu.edu/en/">New York University Abu Dhabi</a> in the <a target="_blank" href="http://sites.nyuad.nyu.edu/ccs-ad/">Center for Cyber Security</a>. I am currently working with <a target="_blank" href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/michail-maniatakos.html">Prof. Michail Maniatakos</a>. I obtained a Ph.D. degree from the <a target="_blank" href="http://cse.iitkgp.ac.in/">Department of Computer Science and Engineering</a> at <a target="_blank" href="http://www.iitkgp.ac.in/">Indian Institute of Technology Kharagpur</a> in 2022 under the supervision of <a target="_blank" href="https://sites.google.com/view/debdeepmukhopadhyay/">Prof. Debdeep Mukhopadhyay</a>.
-	<p>I am a member of the <a target="_blank" href="https://wp.nyu.edu/momalab/">Modern Microprocessor Architectures Lab</a> and my primary research interests mainly lie in the confluence of Deep Learning and Security. I have recently been working with infamous Backdoor Attacks in collaborative Federated Learning environments. I have previously worked in employing Deep Learning techniques in the field of Hardware and System Security, and also designing robust countermeasures against different attacks on Deep Learning implementations. I am also interested in various security aspects of Deep Learning techniques like fault-resistance, privacy leakages, adversarial attacks, model-extraction, etc. My other research interests include analyzing physical side-channel leakages from secured cryptographic implementations through micro-architectures, power consumption, etc.</p>
-	<p>I have been a Visiting Research Assistant in the <a target="_blank" href="http://scse.ntu.edu.sg/Pages/Home.aspx">School of Computer Science and Engineering</a> at <a target="_blank" href="http://www.ntu.edu.sg/Pages/home.aspx">Nanyang Technological University Singapore</a> from August 2017 to January 2018, where I worked with <a target="_blank" href="http://research.ntu.edu.sg/expertise/academicprofile/Pages/StaffProfile.aspx?ST_EMAILID=ASTSRIKAN">Dr. Thambipillai Srikanthan</a> and <a target="_blank" href="http://www.ntu.edu.sg/home/assklam/">Dr. Siew-Kei Lam.</a></p>
-	    <p>I greatly appreciate the following organizations for their generous fellowship support during the course of my Ph.D.
-	       <ul>
-		       <li>IBM Research India.</li>
-		       <li>Department of Higher Education, MHRD, Government of India.</li>
-		       <li>The Chatterjee Group.</li>
-               </ul>
-	    </p>
-	    <p></p>
-            <p><a href="files/resume.pdf" class="btn btn-primary" target="_blank">Download My CV</a>
-        </div>
+  <!-- Header -->
+  <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto py-6 px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Manaar Alam</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="text-white font-bold">Home</a>
+        <a href="publications.html" class="text-gray-300 hover:text-white transition">Publications</a>
+        <a href="awards.html" class="text-gray-300 hover:text-white transition">Recognition</a>
+        <a href="talks.html" class="text-gray-300 hover:text-white transition">Talks</a>
+        <a href="teaching.html" class="text-gray-300 hover:text-white transition">Teaching</a>
+        <a href="services.html" class="text-gray-300 hover:text-white transition">Services</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white transition">Contacts</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- Achievement Section -->
-<section id="achievement">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Awards and Honours</h2>
-            <ul>
-		<li>3rd Best Poster Award at SPACE 2020.</li>
-		<li>2nd Best Presentation Award in Applied Research Competition at CSAW 2019.</li>
-		<li>Best Student Paper Award at CARDIS 2019.</li>
-		<li>IBM PhD Fellowship Award for the Academic Year 2019-20.</li>
-		<li>DSCI Excellence Award as a team - felicitated by Bharat Chamber of Commerce.</li>
-            	<li>3rd Best Poster Award in Young Researcher's Forum at SPACE 2018.</li>
-            	<li>Finalist of Qualcomm Innovation Fellowship India 2017 and 2019.</li>
-	    	<li>2nd Best Hardware Demo Award in Embedded Security Challenge at CSAW 2016.</li>
-            	<li>National Merit-cum-Means Scholarship awarded by WBMDFC from 2009 to 2013.</li>
-            	<li>National Merit Scholarship awarded by Govt. of India for being in the top 20 position in Higher Secondary Board Examination in 2009.</li>
-            </ul>
-            </div>
-        </div>
-</section>
-
-<!-- Invited Talk Section -->
-<section id="talk">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Invited Talks</h2>
-            <ol reversed>
-		<li><span class="label label-success">VLSID'22</span> <b>Artificial Intelligence in Security: Potential to Make and Break a Secure Connected World</b> <a target="_blank" href="https://docs.google.com/presentation/d/1QX-PAu96hpBe2bRjBmkdHdUhbe-9jIqw/edit?usp=sharing&ouid=104383586870104648058&rtpof=true&sd=true"><i class="fa fa-television" style="color:red"></i></i></a></br> <i>35th International Conference on VLSI Design (VLSID)</i>, Virtual, February 2022. </br> <b>Co-Speaker:</b> Prof. Debdeep Mukhopadhyay.</li>
-            	<li><span class="label label-success">IIT Kharagpur</span> <b>In-situ Extraction of Randomness from Computer Architecture</b> <a target="_blank" href="talks/CPSS_Manaar.pptx"><i class="fa fa-television" style="color:red"></i></i></a></br> <i>Workshop on Cyber Physical System Security (CPSS)</i>, Indian Institute of Technology Kharagpur, December 2019.</li>
-            	<li><span class="label label-success">IIT Kharagpur</span> <b>Early Detection of Anomaly using Side-Channel: Statistics and Learning</b> <a target="_blank" href="talks/ASCEHS_Manaar.pptx"><i class="fa fa-television" style="color:red"></i></i></a></br> <i>Workshop on Advanced Side Channel Evaluation of Hardware Security (ASCEHS)</i>, Indian Institute of Technology Kharagpur, July 2018.</li>
-            </ol>
-            </div>
-        </div>
-</section>
-
-<!-- Service Section -->
-<section id="service">
-    <div class="container lead">
-        <div style="text-align: left; margin-top:10px" class="col-md-12">
-           <hr class="star-primary">
-           <h2>Professional Service</h2>
-	   <p>
-           <span class="label label-success">Reviewer of Journals</span>
-           <ul>
-	       <li>
-                   IEEE ESL, IEEE TIFS, IEEE TVLSI, ACM TECS, ACM JETC, IACR TCHES, IET TRIT
-               </li>
-            </ul>
-           </p>
-           <p>
-           <span class="label label-success">Reviewer of Conferences</span>
-		<ul>
-	       <li>
-                   CARDIS, CCS, DAC, DATE, ICCAD, Indocrypt, NDSS, NeurIPS, S&P, SPACE, TrustCom, Usenix Security, VLSI-SoC
-               </li>
-            </ul>
-           </p>
-           <span class="label label-success">Reviewer of Workshops</span>
-           <ul>
-		<li>
-                   COSADE, CPSS, TopinHES, WOOT
-               </li>
-            </ul>
-            </p>
-        </div>
+  <!-- About -->
+  <section class="max-w-5xl mx-auto px-4 pt-10 pb-4">
+    <div class="flex flex-col md:flex-row md:space-x-8">
+      <div class="md:w-1/4 mb-6 md:mb-0">
+        <img src="pics/bio.png" alt="Manaar Alam" class="w-53 h-53 object-cover rounded-2xl shadow-lg border border-gray-300" />
+      </div>
+      <div class="md:w-3/4 text-justify text-[1.05rem] space-y-4">
+        <p>
+          I am a member of the
+          <a target="_blank" href="https://wp.nyu.edu/momalab/" class="text-blue-800 font-medium">Modern Microprocessor Architectures Lab</a>
+          at New York University Abu Dhabi where I work as a Post Doctoral Associate in the Center for Cyber Security with
+          <a target="_blank" href="https://nyuad.nyu.edu/en/academics/divisions/engineering/faculty/michail-maniatakos.html" class="text-blue-800 font-medium">Prof. Michail (Mihalis) Maniatakos</a>.
+          My research focuses on the intersection of machine learning and security, with an emphasis on securing machine learning models
+          against vulnerabilities and threats, as well as applying machine learning techniques to improve system security.
+        </p>
+        <p>
+          I received my PhD in Computer Science and Engineering from Indian Institute of Technology (IIT) Kharagpur in July 2022, advised by
+          <a href="https://sites.google.com/view/debdeepmukhopadhyay/" target="_blank" class="text-blue-800 font-medium">Prof. Debdeep Mukhopadhyay</a>.
+          I was a Visiting Research Assistant in the School of Computer Science and Engineering at Nanyang Technological University (NTU) Singapore 
+          from August 2017 to January 2018.
+        </p>
+      </div>
     </div>
-</section>
 
-<!-- Competition Section -->
-<section id="competitions">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Competitions</h2>
-            <ol reversed>
-		<li><span class="label label-success">IIT Kanpur</span> <i>Cyber Security Awareness Week - Applied Research Competition in India (2019)</i>, Indian Institute of Technology Kanpur, Kanpur, India. <font color="red">[Secured 2nd Place]</font></li>
-            	<li><span class="label label-success">HOST'18</span> <i>Hardware Demo (2018)</i>, IEEE International Symposium on Hardware Oriented Security and Trust (HOST), Virginia, United States. <font color="red">[Reached Final Round]</font></li>
-            	<li><span class="label label-success">IIT Kanpur</span> <i>Cyber Security Awareness Week - Embedded Security Challenge in India (2016)</i>, Indian Institute of Technology Kanpur, Kanpur, India. <font color="red">[Secured 2nd Place]</font></li>
-            	<li><span class="label label-success">IIT Bombay</span> <i>International Championship for Artificial Intelligence & Networking (2015)</i>, Indian Institute of Technology Bombay, Mumbai, India. <font color="red">[Secured 2nd Place]</font></li>
-            	<li><span class="label label-success">IIT Bombay</span> <i>National Round of Indo-US Robo League (2015)</i>, Indian Institute of Technology Bombay, Mumbai, India. <font color="red">[Reached Pre-Final Round]</font></li>
-            </ol>
-            </div>
+    <!-- Contact & Links -->
+    <div class="mt-8 flex justify-center">
+      <div class="flex flex-wrap justify-center items-center gap-5 text-base text-center">
+        <div class="flex items-center">
+          <i class="fa fa-envelope text-blue-800 mr-2 text-lg"></i>
+            <span>
+              alam <span class="text-gray-500">[dot]</span> manaar <span class="text-gray-500">[at]</span> nyu <span class="text-gray-500">[dot]</span> edu
+            </span>
         </div>
-</section>
-
-<!-- Courses Section -->
-<section id="courses">
-    <div class="container lead">
-        <div style="text-align: left; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Teaching Assistant</h2>
-            <ul>
-                <li><span class="label label-default">Autumn'15</span> Computer Programming Lab, Data Structures Lab</li>
-                <li><span class="label label-default">Spring'16</span> Computer Programming Lab, Algorithm Design & Analysis Lab</li>
-                <li><span class="label label-default">Spring'17</span> Programming and Data Structures Laboratory</li>
-                <li><span class="label label-default">Spring'18</span> Foundation of Algorithm Design and Machine Learning</li>
-                <li><span class="label label-default">Autumn'18</span> <span class="label label-default">Autumn'19</span> Cryptography and Network Security</li>
-		<li><span class="label label-default">Spring'19</span> <span class="label label-default">Spring'20</span> High Performance Computer Architecture</li>
-		<li><span class="label label-default">Autumn'20</span> Programming and Data Structures (Theory)</li>
-            </ul>
-        </div>
+        <a href="https://scholar.google.com/citations?user=46jmlGgAAAAJ" target="_blank" class="flex items-center text-blue-800">
+          <i class="fa fa-graduation-cap mr-2"></i>Google Scholar
+        </a>
+        <a href="https://dblp.org/pid/192/5163.html" target="_blank" class="flex items-center text-blue-800">
+          <i class="fa fa-book mr-2"></i>DBLP
+        </a>
+        <a href="https://www.linkedin.com/in/manaar-alam/" target="_blank" class="flex items-center text-blue-800">
+          <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+        </a>
+        <a target="_blank" href="assets/resume.pdf" download class="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-sm px-4 py-2 rounded shadow hover:from-blue-600 hover:to-blue-800 transition">
+          Download CV
+        </a>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Research Section -->
-<section id="publications">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px; margin-right:-50px" class="col-md-12">
-            <hr class="star-primary">
+  <!-- Research Interests -->
+  <section class="max-w-5xl mx-auto px-4 py-6 border-t border-gray-300">
+    <h4 class="text-lg font-semibold">
+      Research Interest:
+      <span class="txt-rotate text-blue-800 font-medium" data-period="500"
+        data-rotate='["Deep Learning Security", "System Security", "Hardware Security", "Microarchitectural Security"]'></span>
+    </h4>
+  </section>
 
-            <h2>Publications</h2>
-            <h4>
-	    		<a href="https://scholar.google.com/citations?hl=en&user=46jmlGgAAAAJ" class="btn btn-warning" target="_blank"><i class="fa fa-google"></i> Google Scholar Profile</a>
-	       		<a href="https://dblp.org/pers/hd/a/Alam:Manaar" class="btn btn-warning" target="_blank"><i class="fa fa-graduation-cap"></i> DBLP Profile</a>
-            </h4>
+  <!-- Timeline and Positions -->
+  <section class="max-w-5xl mx-auto py-10 px-4">
+    <div class="flex flex-col md:flex-row">
 
-	<h3><b>Peer-Reviewed Journals</b></h3>
-            <ol reversed>
-		<li><span class="label label-danger">JoC</span> <b>Learn from Your Faults: Leakage Assessment in Fault Attacks using Deep Learning</b> </br> Sayandeep Saha, <u>Manaar Alam</u>, Arnab Bag, Debdeep Mukhopadhyay, and Pallab Dasgupta.</br> <em>IACR Journal of Cryptology.</em> <font color="red">(To Appear)</font> </li>
-		<li><span class="label label-danger">TCHES</span> <b>Whispering MLaaS: Exploiting Timing Channels to Compromise User Privacy in Deep Neural Networks</b> <a target="_blank" href="https://tches.iacr.org/index.php/TCHES/article/view/10295"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> Shubhi Shukla, <u>Manaar Alam</u>, Sarani Bhattacharya, Debdeep Mukhopadhyay, and Pabitra Mitra.</br> <em>IACR Transactions on Cryptographic Hardware and Embedded Systems, Volume: 2023, Issue: 2, March 2023.</em> </li>
-		<li><span class="label label-danger">TC</span> <b>Birds of the Same Feather Flock Together: A Dual Mode Circuit for Strong PUF-TRNG Functionalities</b> </br> Kuheli Pratihar, Urbi Chatterjee, <u>Manaar Alam</u>, Debdeep Mukhopadhyay, and Rajat Subhra Chakraborty.</br> <em>IEEE Transactions on Computers.</em> <font color="red">(To Appear)</font> </li>
-		<li><span class="label label-danger">TCAD</span> <b>Exploring Bitslicing Architectures for Enabling FHE-assisted Machine Learning</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/9920696"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> Soumik Sinha, Sayandeep Saha, <u>Manaar Alam</u>, Varun Agarwal, Ayantika Chatterjee, Anoop Mishra, Deepak Khazanchi, and Debdeep Mukhopadhyay.</br> <em>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, Volume: 41, Issue: 11, November 2022.</em> </li>
-		<li><span class="label label-danger">JETC</span> <b>NN-Lock: A Lightweight Authorization to Prevent IP Threats of Deep Learning Models</b> <a target="_blank" href="https://dl.acm.org/doi/10.1145/3505634"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u>, Sayandeep Saha, Debdeep Mukhopadhyay, and Sandip Kundu.</br> <em>ACM Journal on Emerging Technologies in Computing Systems, Volume: 18, Issue: 3, July 2022.</em></li>
-		<li><span class="label label-danger">TRIT</span> <b>A Survey on Adversarial Attacks and Defences</b> <a target="_blank" href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cit2.12028"><i class="fa fa-file-pdf-o" style="color:red"></i></a> </br> Anirban Chakraborty, <u>Manaar Alam</u>, Vishal Dey, Anupam Chattopadhyay, and Debdeep Mukhopadhyay.</br> <em>IET CAAI Transactions on Intelligence Technology, Volume: 6, Issue: 1, March 2021.</em></li>
-		<li><span class="label label-danger">TCHES</span> <b>RASSLE: Return Address Stack based Side-channel LEakage</b> <a target="_blank" href="https://tches.iacr.org/index.php/TCHES/article/view/8795"><i class="fa fa-file-pdf-o" style="color:red"></i></a> </br> Anirban Chakraborty, Sarani Bhattacharya, <u>Manaar Alam</u>, Sikhar Patranabis, and Debdeep Mukhopadhyay.</br> <em>IACR Transactions on Cryptographic Hardware and Embedded Systems, Volume: 2021, Issue: 2, February 2021.</em></li>
-		<li><span class="label label-danger">JETC</span> <b>Victims can be Saviors: A Machine Learning based detection for Micro-Architectural Side-Channel Attacks</b> <a target="_blank" href="https://dl.acm.org/doi/10.1145/3439189"><i class="fa fa-file-pdf-o" style="color:red"></i></a> </br> <u>Manaar Alam</u>, Sarani Bhattacharya, and Debdeep Mukhopadhyay.</br> <em>ACM Journal on Emerging Technologies in Computing Systems, Volume: 17, Issue: 2, January 2021.</em></li>
-		<li><span class="label label-danger">JCEN</span> <b>Improving Accuracy of HPC-based Malware Classification for Embedded Platforms using Gradient Descent Optimization</b> <a target="_blank" href="https://link.springer.com/article/10.1007%2Fs13389-020-00232-9"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u>, Debdeep Mukhopadhyay, Sai Praveen Kadiyala, Siew-Kei Lam, and Thambipillai Srikanthan.</br> <em>Springer Journal of Cryptographic Engineering, Volume: 10, Issue: 4, November 2020.</em> </li>
-		<li><span class="label label-danger">JETC</span> <b>Neural Network-based Inherently Fault-Tolerant Hardware Cryptographic Primitives without Explicit Redundancy Checks</b> <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3409594"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u>, Arnab Bag, Debapriya Basu Roy, Dirmanto Jap, Jakub Breier, Shivam Bhasin, and Debdeep Mukhopadhyay.</br> <em>ACM Journal on Emerging Technologies in Computing Systems, Volume: 17, Issue: 1, September 2020.</em></li>
-		<li><span class="label label-danger">TECS</span> <b>LAMBDA: Lightweight Assessment of Malware for emBeddeD Architectures</b> <a target="_blank" href="https://dl.acm.org/doi/abs/10.1145/3390855"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> Sai Praveen Kadiyala, <u>Manaar Alam</u>, Yash Shrivastava, Sikhar Patranabis, Muhamed Fauzi Bin Abbas, Arnab Kumar Biswas, Debdeep Mukhopadhyay, and Thambipillai Srikanthan.</br> <em>ACM Transactions on Embedded Computing Systems, Volume: 19, Issue: 4, June 2020.</em> </li>
-		<li><span class="label label-danger">HASS</span> <b>IPA: An Instruction Profiling based Micro-Architectural Side-Channel Attack on Block Ciphers</b> <a target="_blank" href="https://link.springer.com/article/10.1007/s41635-018-0060-3"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u>, Sarani Bhattacharya, Sayan Sinha, Chester Rebeiro, and Debdeep Mukhopadhyay.</br> <em>Springer Journal of Hardware and Systems Security, Volume: 3, Issue: 1, March 2019.</em></li>
-            	<li><span class="label label-danger">ESL</span> <b>Customized Instructions for Protection Against Memory Integrity Attacks</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/8341734/"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br>Debapriya Basu Roy, <u>Manaar Alam</u>, Sarani Bhattacharya, Vidya Govindan, Francesco Regazzoni, Rajat Subhra Chakraborty, and Debdeep Mukhopadhyay.</br><em>IEEE Embedded Systems Letters, Volume: 10, Issue: 3, September 2018.</em> </li>
-            </ol>
+      <!-- Left Column -->
+      <div class="md:w-3/5 space-y-12">
 
-            <h3><b>Peer-Reviewed Conferences</b></h3>
-            <ol reversed>
-		    <li><span class="label label-primary">AfricaCrypt'22</span> <b>TransNet: Shift Invariant Transformer Network for Side Channel Analysis</b><a target="_blank" href="https://link.springer.com/chapter/10.1007/978-3-031-17433-9_16"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br>Suvadeep Hajra, Sayandeep Saha, <u>Manaar Alam</u>, and Debdeep Mukhopadhyay.</br><em>13th International Conference on Cryptology, AfricaCrypt 2022, Fes, Morocco, July 18-20, 2022.</em></li>
-		    <li><span class="label label-primary">ISQED'21</span> <b>Deep Learning assisted Cross-Family Profiled Side-Channel Attacks using Transfer Learning</b> <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9424254"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/ISQED_2021.pptx"><i class="fa fa-television" style="color:red"></i></a></br>Dhruv Thapar, <u>Manaar Alam</u>, and Debdeep Mukhopadhyay.</br><em>22nd International Symposium on Quality Electronic Design, Virtual, April 7-9, 2021.</em></li>	
-		    <li><span class="label label-primary">SOCC'20</span> <b>HARDY: Hardware Based Analysis for malwaRe Detection in Embedded sYstems</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/9524727"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br>Sai Praveen Kadiyala, Mohit Garg, <u>Manaar Alam</u>, Hau Ngo, Debdeep Mukhopadhyay and Thambipillai Srikanthan.</br><em>33rd IEEE International System-on-Chip Conference, Virtual, September 8-11, 2020.</em></li>
-			<li><span class="label label-primary">ATS'19</span> <b>Deep Learning based Diagnostics for Rowhammer Protection of DRAM Chips</b> <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/8949394"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/ATS_2019.pptx"><i class="fa fa-television" style="color:red"></i></a></br>Anirban Chakraborty, <u>Manaar Alam</u> and Debdeep Mukhopadhyay.</br><em>28th IEEE Asian Test Symposium, Kolkata, India, December 10-13, 2019.</em></li>
-				
-				<li><span class="label label-primary">CARDIS'19</span> <b>In-situ Extraction of Randomness from Computer Architecture through Hardware Performance Counters</b> <a target="_blank" href="https://link.springer.com/chapter/10.1007%2F978-3-030-42068-0_1"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/CARDIS_2019.pptx"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Astikey Singh, Sarani Bhattacharya, Kuheli Pratihar and Debdeep Mukhopadhyay.</br> <em>18th Smart Card Research and Advanced Application Conference, Prague, Czech Republic, November 11-13, 2019.</em> <font color="red">[Best Paper Award]</font></li>
-
-				<li><span class="label label-primary">DAC'19</span> <b>How Secure are Deep Learning Algorithms from Side-Channel based Reverse Engineering?</b> <a target="_blank" href="https://dl.acm.org/citation.cfm?doid=3316781.3322465"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u> and Debdeep Mukhopadhyay.</br> <em>56th ACM/IEEE Design Automation Conference, Las Vegas, United States of America, June 2-6, 2019.</em></li>
-				
-				<li><span class="label label-primary">HOST'19</span> <b>RATAFIA: Ransomware Analysis using Time And Frequency Informed Autoencoders</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/8740837"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/HOST_2019.pptx"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Sarani Bhattacharya, Swastika Dutta, Sayan Sinha, Debdeep Mukhopadhyay, and Anupam Chattopadhyay.</br> <em>12th IEEE International Symposium on Hardware Oriented Security and Trust, McLean, United States of America, May 6-10, 2019.</em></li>
-		  		
-		  		<li><span class="label label-primary">ASP-DAC'19</span> <b>A 0.16pJ/bit Recurrent Neural Network Based PUF for Enhanced Machine Learning Attack Resistance</b> <a target="_blank" href="https://dl.acm.org/citation.cfm?doid=3287624.3287696"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> Nimesh Kirit Shah, <u>Manaar Alam</u>, Durga Prasad Sahoo, Debdeep Mukhopadhyay, and Arindam Basu.</br> <em>24th Asia and South Pacific Design Automation Conference, Tokyo, Japan, January 21-24, 2019.</em></li>
-            	
-            	<li><span class="label label-primary">SPACE'17</span> <b>Tackling the Time-Defence: An Instruction Count Based Micro-architectural Side-Channel Attack on Block Ciphers</b> <a target="_blank" href="https://link.springer.com/chapter/10.1007%2F978-3-319-71501-8_3"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/SPACE_2017.pdf"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Sarani Bhattacharya, and Debdeep Mukhopadhyay.</br> <em>7th International Conference on Security, Privacy, and Applied Cryptography Engineering, Goa, India, December 13-17, 2017.</em></li>
-
-            	<li><span class="label label-primary">MEMOCODE'16</span> <b>SmashClean: A hardware level mitigation to stack smashing attacks in OpenRISC</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/7797764/"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/MEMOCODE_2016.pdf"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Debapriya Basu Roy, Sarani Bhattacharya, Vidya Govindan, Rajat Subhra Chakraborty, and Debdeep Mukhopadhyay.</br> <em>14th ACM/IEEE International Conference on Formal Methods and Models for System Design, Kanpur, India, November 18-20, 2016.</em></li>
-            	
-            	<li><span class="label label-primary">RAIT'16</span> <b>A novel parallel search technique for optimization</b> <a target="_blank" href="https://ieeexplore.ieee.org/document/7507912/"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> <u>Manaar Alam</u>, Soumyajit Chatterjee, and Haider Banka.</br> <em>3rd International Conference on Recent Advances in Information Technology, Dhanbad, India, March 3-5, 2016.</em> </li>
-            </ol>
-
-<h3><b>Peer-Reviewed Workshops</b></h3>
-	<ol reversed>
-	<li><span class="label label-primary">AIHWS@ACNS'21</span> <b>A Good Anvil Fears No Hammer: Automated Rowhammer Detection using Unsupervised Deep Learning</b> <a target="_blank" href="https://link.springer.com/chapter/10.1007%2F978-3-030-81645-2_5"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/AIHWS_2021.pdf"><i class="fa fa-television" style="color:red"></i></a></br> Anirban Chakraborty, <u>Manaar Alam</u>, and Debdeep Mukhopadhyay.</br> <em>2nd Workshop on Artificial Intelligence in Hardware Security (co-located with Applied Cryptography and Network Security 2021), Virtual, June 21, 2021.</em></li>
-	<li><span class="label label-primary">Kangacrypt@Asiacrypt'18</span> <b>RAPPER: Ransomware Prevention via Performance Counters</b> <a target="_blank" href="talks/Kangacrypt_2018.pptx"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Sayan Sinha, Sarani Bhattacharya, Swastika Dutta, Debdeep Mukhopadhyay, and Anupam Chattopadhyay.</br> <em>Australian Workshop on Offensive Cryptography (co-located with Asiacrypt 2018), Adelaide, Australia, December 7-9, 2018.</em></li>
-	<li><span class="label label-primary">PROOFS@CHES'18</span> <b>Side-Channel Assisted Malware Classifier with Gradient Descent Correction for Embedded Platforms</b> <a target="_blank" href="https://easychair.org/publications/paper/Fhjh"><i class="fa fa-file-pdf-o" style="color:red"></i></a> <a target="_blank" href="talks/PROOFS_2018.pptx"><i class="fa fa-television" style="color:red"></i></a></br> <u>Manaar Alam</u>, Debdeep Mukhopadhyay, Sai Praveen Kadiyala, Siew-Kei Lam, and Thambipillai Srikanthan.</br><em>7th International Workshop on Security Proofs for Embedded Systems (co-located with Cryptographic Hardware
-and Embedded Systems 2018), Amsterdam, Netherlands, September 13, 2018.</em></li>
-	</ol>
-
-<h3><b>Patents</b></h3>
-            <ul>
-            	<li><span class="label label-info">Indian</span> <b>A System for Detecting Ransomware in a Computer System and a Method Thereof</b></br> <u>Manaar Alam</u>, Sarani Bhattacharya, Debdeep Mukhopadhyay, and Anupam Chattopadhyay.</br> <em>Indian Patent, Patent No.: IN201831045833A, Filed: December 4, 2018, Published: June 12, 2020.</em></li>
-            </ul>
+        <!-- Professional Positions -->
+        <div>
+          <h2 class="text-xl font-semibold mb-6 flex items-center space-x-2">
+            <i class="fa fa-briefcase text-blue-800"></i>
+            <span>Professional Positions</span>
+          </h2>
+          <ol class="border-l-2 border-blue-800 pl-6 space-y-10">
+            <li class="flex items-start gap-4">
+              <img src="pics/nyuad.png" alt="NYU Abu Dhabi" class="w-10 h-10 object-contain" />
+              <div>
+                <p class="font-semibold">Post Doctoral Associate</p>
+                <p class="text-sm text-gray-600">New York University Abu Dhabi, UAE</p>
+                <p class="text-sm text-gray-500">Jan 2022 - Present</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="pics/ntu.png" alt="NTU Singapore" class="w-10 h-10 object-contain" />
+              <div>
+                <p class="font-semibold">Visiting Research Assistant</p>
+                <p class="text-sm text-gray-600">Nanyang Technological University, Singapore</p>
+                <p class="text-sm text-gray-500">Aug 2017 - January 2018</p>
+              </div>
+            </li>
+          </ol>
         </div>
-    </div>
-</section>
 
-<!-- Poster Section -->
-<section id="posters">
-    <div class="container lead">
-        <div style="text-align: justify; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Poster Presentations</h2>
-            <ol reversed>
-		<li><span class="label label-success">SPACE'20</span> <b>Using Rowhammer for Fault Analysis of Block Ciphers and a Mitigation Technique thereof</b> <a target="_blank" href="poster/space_2020_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: 10th International Conference on Security, Privacy, and Applied Cryptography Engineering (SPACE), December 2020, Virtual. <font color="red">[3rd Best Poster Award]</font></li>
-		<li><span class="label label-success">DAC'19</span> <b>How Secure are Deep Learning Algorithms from Side-Channel based Reverse Engineering?</b> <a target="_blank" href="poster/dac_lbr_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: ACM/IEEE Design Automation Conference (DAC), June 2019, United States of America.</li>
-	    	<li><span class="label label-success">DAC'19</span> <b>Enhancing Fault Tolerance of Neural Networks for Security-Critical Applications</b> <a target="_blank" href="poster/dac_wip_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: ACM/IEEE Design Automation Conference (DAC), June 2019, United States of America.</li>
-		<li><span class="label label-success">SPACE'18</span> <b>Detecting Malware and Ransomware using Hardware Performance Counters</b> <a target="_blank" href="poster/space_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: 8th International Conference on Security, Privacy, and Applied Cryptography Engineering (SPACE), December 2018, India. <font color="red">[3rd Best Poster Award]</font></li>
-		<li><span class="label label-success">HOST'18</span> <b>Detecting Malware and Ransomware using Hardware Performance Counters</b> <a target="_blank" href="poster/host_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: IEEE International Symposium on Hardware Oriented Security and Trust (HOST), May 2018, United States of America.</li>
-		<li><span class="label label-success">SICW'17</span> <b>LAMBDA: Lightweight Assesment of Malware for emBeddeD Architectures</b> <a target="_blank" href="poster/sicw_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: Singapore International Cyber Week (SICW), September 2017, Singapore.</li>
-		<li><span class="label label-success">CSAW'16</span> <b>SmashClean: A Hardware level mitigation to stack smashing attacks in OpenRISC</b> <a target="_blank" href="poster/csaw_poster.pdf"><i class="fa fa-file-pdf-o" style="color:red"></i></a></br> POSTER: Cyber Security Awareness Week (CSAW), November 2016, India.</li>
-            </ol>
-            </div>
+        <!-- Education -->
+        <div>
+          <h2 class="text-xl font-semibold mb-6 flex items-center space-x-2">
+            <i class="fa fa-university text-blue-800"></i>
+            <span>Education</span>
+          </h2>
+          <ol class="border-l-2 border-blue-800 pl-6 space-y-10">
+            <li class="flex items-start gap-4">
+              <img src="pics/iitkgp.png" alt="IIT Kharagpur" class="w-10 h-10 object-contain" />
+              <div>
+                <p class="font-semibold">Ph.D. in Computer Science and Engineering</p>
+                <p class="text-sm text-gray-600">Indian Institute of Technology Kharagpur, India</p>
+                <p class="text-sm text-gray-500">Jul 2016 - Jul 2022</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="pics/iit_dhanbad.png" alt="IIT Dhanbad" class="w-10 h-10 object-contain" />
+              <div>
+                <p class="font-semibold">M.Tech in Computer Science and Engineering</p>
+                <p class="text-sm text-gray-600">Indian Institute of Technology Dhanbad, India</p>
+                <p class="text-sm text-gray-500">Jul 2014 - Jun 2016</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <img src="pics/iem.png" alt="IEM Kolkata" class="w-10 h-10 object-contain" />
+              <div>
+                <p class="font-semibold">B.Tech in Computer Science and Engineering</p>
+                <p class="text-sm text-gray-600">Institute of Engineering and Management, Kolkata, India</p>
+                <p class="text-sm text-gray-500">Aug 2009 - May 2013</p>
+              </div>
+            </li>
+          </ol>
         </div>
-</section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <div class="container lead">
-        <div style="text-align: left; margin-top:10px" class="col-md-12">
-            <hr class="star-primary">
-            <h2>Postal Address</h2>
-                <p>
-                    Manaar Alam,<br>
-	            A1-172I, Center for Cyber Security,<br>
-                    New York University Abu Dhabi,<br>
-                    Abu Dhabi, United Arab Emirates.<br>
-		</p> 
-        </div> 
+      </div>
+
+      <!-- Right Column: News -->
+<div class="md:w-2/5">
+  <h2 class="text-xl font-semibold mb-6 flex items-center text-gray-800">
+    <i class="fa fa-newspaper-o text-blue-800 mr-2 text-xl"></i> News & Highlights
+  </h2>
+  <div class="border-l-2 border-blue-800 pl-6 space-y-6">
+
+    <!-- 2025 -->
+    <div x-data="{ open: true }">
+      <button @click="open = !open" class="w-full text-left font-semibold text-blue-800 flex justify-between items-center">
+        <span><i class="fa fa-calendar-days mr-2"></i>2025</span>
+        <i class="fa" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+      </button>
+      <div x-show="open" x-transition class="mt-4 space-y-2 text-gray-900">
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Joined as PC member for <strong>AAAI 2026</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Joined as PC member for <strong>CHES 2026</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>IEEE Euro S&P 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>DAC 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>DATE 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>WACV 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span>
+          <span>
+            <strong>Invited talk</strong> delivered at the Workshop on Machine Learning and Hardware Security, IIT Kharagpur
+          </span>
+        </p>
+        
+      </div>
     </div>
-</section>
-<center>
-<a href="https://www.flagcounter.me/details/b1s"><img src="https://www.flagcounter.me/b1s/" alt="Flag Counter"></a>
-</center>
-	</body>
+
+    <!-- 2024 -->
+    <div x-data="{ open: false }">
+      <button @click="open = !open" class="w-full text-left font-semibold text-blue-800 flex justify-between items-center">
+        <span><i class="fa fa-calendar-days mr-2"></i>2024</span>
+        <i class="fa" :class="open ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+      </button>
+      <div x-show="open" x-transition class="mt-4 space-y-2 text-gray-900">
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Joined as PC member for <strong>AAAI 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Joined as PC member for <strong>AsiaCCS 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Joined as PC member for <strong>VLSID 2025</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Served as Session Chair at <strong>ACNS 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>CODS-COMAD 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>DAC 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>DATE 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>ACNS 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Two papers accepted at <strong>IEEE JETCAS 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span> <span>Paper accepted at <strong>IEEE TAI 2024</strong></span></p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span>
+          <span>
+            Organized the <strong>BioHack 3D Workshop and Hackathon</strong> as part of <strong>CSAW 2024</strong>
+          </span>
+        </p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span>
+          <span>
+            Served as a member of the organizing committee for <strong>ACNS 2024</strong>
+          </span>
+        </p>
+        <p class="flex"><span class="mr-1"><i class="fa fa-angle-right text-gray-600 mr-2"></i></span>
+          <span>
+            Delivered two guest lectures at NYU Abu Dhabi in the courses <strong>Cyberwarfare</strong> and <strong>Computer Organization and Architectures</strong>
+          </span>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Archive Link -->
+    <!-- <div class="mt-6">
+      <a href="news-archive.html" class="text-sm text-blue-800 hover:underline flex items-center">
+        <i class="fa fa-archive mr-2"></i>View older updates (2023 and earlier)
+      </a>
+    </div> -->
+
+  </div>
+</div>
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 border-t border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="font-semibold">&copy; Manaar Alam</p>
+      <p class="text-gray-400 mt-2 md:mt-0">Last updated: July 2025</p>
+    </div>
+  </footer>
+
+</body>
 
 </html>

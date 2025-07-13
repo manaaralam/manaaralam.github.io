@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | Manaar Alam</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans leading-relaxed tracking-wide min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl w-full mx-auto py-6 px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Manaar Alam</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="publications.html" class="text-white font-bold">Publications</a>
+        <a href="awards.html" class="text-gray-300 hover:text-white transition">Recognition</a>
+        <a href="talks.html" class="text-gray-300 hover:text-white transition">Talks</a>
+        <a href="teaching.html" class="text-gray-300 hover:text-white transition">Teaching</a>
+        <a href="services.html" class="text-gray-300 hover:text-white transition">Services</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white transition">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl w-full mx-auto py-10 px-4 flex-grow">
+    <div x-data="{
+      Confopen: { '2025': true, '2024': false, '2023': false, '2022': false, '2021': false, '2020': false, '2019': false, '2018': false, '2017': false, '2016': false },
+      jourOpen: { '2024': true, '2023': false, '2022': false, '2021': false, '2020': false, '2019': false, '2018': false },
+      expandAll() {
+        for (const y in this.Confopen) this.Confopen[y] = true;
+        for (const y in this.jourOpen) this.jourOpen[y] = true;
+      }
+    }">
+
+      <!-- Expand All Button -->
+      <div class="flex justify-end mb-6">
+        <button
+          @click="expandAll"
+          class="bg-gray-900 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition"
+        >
+          Expand All
+        </button>
+      </div>
+
+      <!-- Conference Proceedings -->
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Conference Proceedings</h3>
+      <template x-for="year in ['2025','2024','2023','2022','2021','2020','2019','2018','2017','2016']" :key="year">
+        <div class="mb-6 border-l-4 border-blue-800 pl-4">
+          <button @click="Confopen[year] = !Confopen[year]"
+            class="flex justify-between items-center w-full text-lg font-semibold focus:outline-none text-blue-800">
+            <div class="flex items-center space-x-2">
+              <i class="fa fa-calendar-days text-blue-800 mr-2"></i>
+              <span x-text="year"></span>
+            </div>
+            <svg :class="{ 'transform rotate-180': Confopen[year] }" class="w-5 h-5 text-blue-800 transition-transform duration-200"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div x-show="Confopen[year]"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="mt-2 space-y-2 text-gray-700">
+
+            <template x-if="year === '2025'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c22]</span>
+                  <div class="text-justify">
+                    Christoforos Vasilatos, Dunia J. Mahboobeh, Hithem Lamri, <strong>Manaar Alam</strong>, and Michail Maniatakos,
+                    <em>"LLMPot: Dynamically Configured LLM-based Honeypot for Industrial Protocol and Physical Process Emulation."</em>
+                    In IEEE European Symposium on Security and Privacy <strong>(EuroS&P)</strong>, 2025.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://arxiv.org/abs/2405.05999" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/LLMPot" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c21]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Hithem Lamri, and Michail Maniatakos, 
+                    <em>"ReVeil: Unconstrained Concealed Backdoor Attack on Deep Neural Networks using Machine Unlearning."</em>
+                    In ACM/IEEE Design Automation Conference <strong>(DAC)</strong>, 2025.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://arxiv.org/abs/2502.11687" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/ReVeil" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c20]</span>
+                  <div class="text-justify">
+                    Lakshmi Likhitha Mankali, Jitendra Bhandari, <strong>Manaar Alam</strong>, Ramesh Karri, Michail Maniatakos, Ozgur Sinanoglu, and Johann Knechtel, 
+                    <em>"RTL-Breaker: Assessing the Security of LLMs against Backdoor Attacks on HDL Code Generation."</em>
+                    In IEEE Design, Automation and Test in Europe <strong>(DATE)</strong>, 2025.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10993260" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c19]</span>
+                  <div class="text-justify">
+                    Shubhi Shukla, Subhadeep Dalui, <strong>Manaar Alam</strong>, Shubhajit Datta, Arijit Mondal, Debdeep Mukhopadhyay, and Partha Pratim Chakrabarti, 
+                    <em>"Guardian of the Ensembles: Introducing Pairwise Adversarially Robust Loss for Resisting Adversarial Attacks in DNN Ensembles."</em>
+                    In IEEE/CVF Winter Conference on Applications of Computer Vision <strong>(WACV)</strong>, 2025.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10943649" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/shubhishukla10/PARL" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+
+            <template x-if="year === '2024'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c18]</span>
+                  <div class="text-justify">
+                    Shubhajit Datta, <strong>Manaar Alam</strong>, Arijit Mondal, Debdeep Mukhopadhyay, and Partha Pratim Chakrabarti,
+                    <em>"Ignorance is not Bliss: A Novel Ensemble Method to Counter Adversarial Attacks on Deep Learning Models."</em>
+                    In International Conference on Data Science and Management of Data <strong>(CODS-COMAD)</strong>, 2024.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/full/10.1145/3703323.3703336" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c17]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong> and Michail Maniatakos, 
+                    <em>"AdvHunter: Detecting Adversarial Perturbations in Black-Box Neural Networks through Hardware Performance Counters."</em> 
+                    In ACM/IEEE Design Automation Conference <strong>(DAC)</strong>, 2024.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3649329.3655682" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/AdvHunter" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c16]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Yue Wang, and Michail Maniatakos, 
+                    <em>"Detecting Backdoor Attacks in Black-Box Neural Networks through Hardware Performance Counters."</em> 
+                    In IEEE Design, Automation, and Test in Europe Conference & Exhibition <strong>(DATE)</strong>, 2024.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10546739" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/dnn-backdoor-detection-DATE24" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c15]</span>
+                  <div class="text-justify">
+                    Soumyadyuti Ghosh, <strong>Manaar Alam</strong>, Soumyajit Dey, and Debdeep Mukhopadhyay, 
+                    <em>"'Hello? Is there anybody in there?' Leakage Assessment of Differential Privacy Mechanisms in Smart Metering Infrastructure."</em> 
+                    In International Conference on Applied Cryptography and Network Security <strong>(ACNS)</strong>, 2024.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-54776-8_7" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2023'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c14]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Esha Sarkar, and Michail Maniatakos,
+                    <em>"PerDoor: Persistent Backdoors in Federated Learning using Adversarial Perturbations."</em>
+                    In IEEE International Conference on Omni-Layer Intelligent Systems <strong>(COINS)</strong>, 2023.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10189281" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/PerDoor" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2022'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c13]</span>
+                  <div class="text-justify">
+                    Suvadeep Hajra, Sayandeep Saha, <strong>Manaar Alam</strong>, and Debdeep Mukhopadhyay,
+                    <em>"TransNet: Shift Invariant Transformer Network for Side Channel Analysis."</em>
+                    In International Conference on Cryptology <strong>(AfricaCrypt)</strong>, 2022.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-17433-9_16" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2021'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c12]</span>
+                  <div class="text-justify">
+                    Anirban Chakraborty, <strong>Manaar Alam</strong>, and Debdeep Mukhopadhyay,
+                    <em>"A Good Anvil Fears No Hammer: Automated Rowhammer Detection using Unsupervised Deep Learning."</em>
+                    In Workshop on Artificial Intelligence in Hardware Security <strong>(AIHWS@ACNS)</strong>, 2021.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-81645-2_5" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c11]</span>
+                  <div class="text-justify">
+                    Dhruv Thapar, <strong>Manaar Alam</strong>, and Debdeep Mukhopadhyay,
+                    <em>"Deep Learning assisted Cross-Family Profiled Side-Channel Attacks using Transfer Learning."</em>
+                    In International Symposium on Quality Electronic Design <strong>(ISQED)</strong>, 2021.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9424254" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2020'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c10]</span>
+                  <div class="text-justify">
+                    Sai Praveen Kadiyala, Mohit Garg, <strong>Manaar Alam</strong>, Hau Ngo, Debdeep Mukhopadhyay and Thambipillai Srikanthan,
+                    <em>"HARDY: Hardware Based Analysis for malwaRe Detection in Embedded sYstems."</em>
+                    In IEEE International System-on-Chip Conference <strong>(SOCC)</strong>, 2020.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9524727" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2019'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold">[c9]</span>
+                  <div class="text-justify">
+                    Anirban Chakraborty, <strong>Manaar Alam</strong>, and Debdeep Mukhopadhyay,
+                    <em>"Deep Learning based Diagnostics for Rowhammer Protection of DRAM Chips."</em>
+                    In IEEE Asian Test Symposium <strong>(ATS)</strong>, 2019.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8949394" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c8]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Astikey Singh, Sarani Bhattacharya, Kuheli Pratihar, and Debdeep Mukhopadhyay,
+                    <em>"In-situ Extraction of Randomness from Computer Architecture through Hardware Performance Counters."</em>
+                    In Smart Card Research and Advanced Application Conference <strong>(CARDIS)</strong>, 2019. <span class="ml-2 bg-yellow-300 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">Best Student Paper Award</span>
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-42068-0_1" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold">[c7]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong> and Debdeep Mukhopadhyay,
+                    <em>"How Secure are Deep Learning Algorithms from Side-Channel based Reverse Engineering?"</em>
+                    In ACM/IEEE Design Automation Conference <strong>(DAC)</strong>, 2019.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3316781.3322465" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c6]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Sarani Bhattacharya, Swastika Dutta, Sayan Sinha, Debdeep Mukhopadhyay, and Anupam Chattopadhyay,
+                    <em>"RATAFIA: Ransomware Analysis using Time And Frequency Informed Autoencoders."</em>
+                    In IEEE International Symposium on Hardware Oriented Security and Trust <strong>(HOST)</strong>, 2019.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/8740837" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c5]</span>
+                  <div class="text-justify">
+                    Nimesh Kirit Shah, <strong>Manaar Alam</strong>, Durga Prasad Sahoo, Debdeep Mukhopadhyay, and Arindam Basu,
+                    <em>"A 0.16pJ/bit Recurrent Neural Network Based PUF for Enhanced Machine Learning Attack Resistance."</em>
+                    In ACM Asia and South Pacific Design Automation Conference <strong>(ASP-DAC)</strong>, 2019.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3287624.3287696" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2018'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c4]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Debdeep Mukhopadhyay, Sai Praveen Kadiyala, Siew-Kei Lam, and Thambipillai Srikanthan,
+                    <em>"Side-Channel Assisted Malware Classifier with Gradient Descent Correction for Embedded Platforms."</em>
+                    In International Workshop on Security Proofs for Embedded Systems <strong>(PROOFS@CHES)</strong>, 2018.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://easychair.org/publications/paper/Fhjh" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2017'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c3]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Sarani Bhattacharya, and Debdeep Mukhopadhyay,
+                    <em>"Tackling the Time-Defence: An Instruction Count Based Micro-architectural Side-Channel Attack on Block Ciphers."</em>
+                    In International Conference on Security, Privacy, and Applied Cryptography Engineering <strong>(SPACE)</strong>, 2017.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-71501-8_3" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2016'">
+              <ul class="list-disc list-inside space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold mr-3">[c2]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Debapriya Basu Roy, Sarani Bhattacharya, Vidya Govindan, Rajat Subhra Chakraborty, and Debdeep Mukhopadhyay,
+                    <em>"SmashClean: A hardware level mitigation to stack smashing attacks in OpenRISC."</em>
+                    In ACM/IEEE International Conference on Formal Methods and Models for System Design <strong>(MEMOCODE)</strong>, 2016.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7797764" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-blue-800 font-semibold">[c1]</span>
+                  <div class="text-justify">
+                    <strong>Manaar Alam</strong>, Soumyajit Chatterjee, and Haider Banka,
+                    <em>"A novel parallel search technique for optimization."</em>
+                    In IEEE International Conference on Recent Advances in Information Technology <strong>(RAIT)</strong>, 2016.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7507912" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+          </div>
+        </div>
+      </template>
+    </section>
+
+    <!-- Journal publications -->
+    <section>
+        <h3 class="text-2xl font-semibold text-pink-800 mb-4">Journal Publications</h3>
+
+      <template x-for="year in ['2024','2023','2022','2021','2020','2019','2018']" :key="year">
+        <div class="mb-6 border-l-4 border-pink-800 pl-4">
+          <button @click="jourOpen[year] = !jourOpen[year]"
+            class="flex justify-between items-center w-full text-lg font-semibold focus:outline-none text-pink-800">
+            <div class="flex items-center space-x-2">
+              <i class="fa fa-calendar-days text-pink-800 mr-2"></i>
+              <span x-text="year"></span>
+            </div>
+            <svg :class="{ 'transform rotate-180': jourOpen[year] }" class="w-5 h-5 text-pink-800 transition-transform duration-200"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div x-show="jourOpen[year]"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="mt-2 space-y-2 text-gray-700">
+
+            <template x-if="year === '2024'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j18]</span>
+                  <div>
+                    Shubhajit Datta, <strong>Manaar Alam</strong>, Arijit Mondal, Debdeep Mukhopadhyay, and Partha Pratim Chakrabarti, 
+                    <em>"Decision Guided Robust DL Classification of Adversarial Images Combining Weaker Defenses."</em> 
+                    In IEEE Journal on Emerging and Selected Topics in Circuits and Systems <strong>(IEEE JETCAS)</strong>, 
+                    Volume 14, Issue 4, December 2024, Pages 758-772.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10752684" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/Shubhajit1988/BEARR" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j17]</span>
+                  <div>
+                    Shubhi Shukla, <strong>Manaar Alam</strong>, Pabitra Mitra, and Debdeep Mukhopadhyay, 
+                    <em>"Stealing the Invisible: Unveiling Pre-Trained CNN Models through Adversarial Examples and Timing Side-Channels."</em> 
+                    In IEEE Journal on Emerging and Selected Topics in Circuits and Systems <strong>(IEEE JETCAS)</strong>, 
+                    Volume 14, Issue 4, December 2024, Pages 634-646.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10731906" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j16]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Hithem Lamri, and Michail Maniatakos, 
+                    <em>"Get Rid Of Your Trail: Remotely Erasing Backdoors in Federated Learning."</em> 
+                    In IEEE Transactions on Artificial Intelligence <strong>(IEEE TAI)</strong>, 
+                    Volume 5, Issue 12, December 2024, Pages 6683-6698.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10685452" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/momalab/federated_backdoor_unlearning" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j15]</span>
+                  <div>
+                    Yue Wang, Wenqing Li, <strong>Manaar Alam</strong>, Michail Maniatakos, and Saif Eddin Jabari, 
+                    <em>"Backdozer: A Backdoor Detection Methodology for DRL-based Traffic Controllers."</em> 
+                    In ACM Journal on Autonomous Transportation Systems <strong>(ACM JATS)</strong>, 
+                    Volume 1, Issue 4, August 2024, Pages 1-22.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/10.1145/3639828" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2023'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j14]</span>
+                  <div>
+                    Suvadeep Hajra, <strong>Manaar Alam</strong>, Sayandeep Saha, Stjepan Picek, and Debdeep Mukhopadhyay, 
+                    <em>"On the Instability of Softmax Attention-based Deep Learning Models in Side-channel Analysis."</em> 
+                    In IEEE Transactions on Information Forensics and Security <strong>(IEEE TIFS)</strong>, 
+                    Volume 19, October 2023, Pages 514-528.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/10290992" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j13]</span>
+                  <div>
+                    Sayandeep Saha, <strong>Manaar Alam</strong>, Arnab Bag, Debdeep Mukhopadhyay, and Pallab Dasgupta, 
+                    <em>"Learn from Your Faults: Leakage Assessment in Fault Attacks using Deep Learning."</em> 
+                    In Journal of Cryptology <strong>(JoC)</strong>, 
+                    Volume 36, Issue 3, July 2023.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/article/10.1007/s00145-023-09462-6" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/felu-mittir/DL_FALAT" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j12]</span>
+                  <div>
+                    Kuheli Pratihar, Urbi Chatterjee, <strong>Manaar Alam</strong>, Debdeep Mukhopadhyay, and Rajat Subhra Chakraborty, 
+                    <em>"Birds of the Same Feather Flock Together: A Dual Mode Circuit for Strong PUF-TRNG Functionalities."</em> 
+                    In IEEE Transactions on Computers <strong>(IEEE TC)</strong>, 
+                    Volume 72, Issue 6, June 2023, Pages 1636-1651.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/9935279" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j11]</span>
+                  <div>
+                    Shubhi Shukla, <strong>Manaar Alam</strong>, Sarani Bhattacharya, Debdeep Mukhopadhyay, and Pabitra Mitra, 
+                    <em>"Whispering MLaaS: Exploiting Timing Channels to Compromise User Privacy in Deep Neural Networks."</em> 
+                    In IACR Transactions on Cryptographic Hardware and Embedded Systems <strong>(IACR TCHES)</strong>, 
+                    Volume 2023, Issue 2, March 2023, Pages 587-613.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://tches.iacr.org/index.php/TCHES/article/view/10295" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                        &nbsp;&nbsp;
+                        <i class="fab fa-github text-gray-800 mr-1"></i>
+                        <a href="https://github.com/shubhishukla10/whispering_mlaas" class="text-gray-800 hover:underline" target="_blank">[GitHub]</a>
+                        &nbsp;&nbsp;
+                        <i class="fa fa-certificate text-yellow-600 mr-1"></i>
+                        <a href="https://artifacts.iacr.org/tches/2023/a9/" class="text-yellow-600 hover:underline" target="_blank">[Artifact Evaluated]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2022'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j10]</span>
+                  <div>
+                    Soumik Sinha, Sayandeep Saha, <strong>Manaar Alam</strong>, Varun Agarwal, Ayantika Chatterjee, Anoop Mishra, Deepak Khazanchi, and Debdeep Mukhopadhyay, 
+                    <em>"Exploring Bitslicing Architectures for Enabling FHE-assisted Machine Learning."</em> 
+                    In IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems <strong>(IEEE TCAD)</strong>, 
+                    Volume 41, Issue 11, November 2022, Pages 4004-4015.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/9920696" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j9]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Sayandeep Saha, Debdeep Mukhopadhyay, and Sandip Kundu, 
+                    <em>"NN-Lock: A Lightweight Authorization to Prevent IP Threats of Deep Learning Models."</em> 
+                    In ACM Journal on Emerging Technologies in Computing Systems <strong>(ACM JETC)</strong>, 
+                    Volume 18, Issue 3, July 2022, Pages 51:1-51:19.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/10.1145/3505634" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2021'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j8]</span>
+                  <div>
+                    Anirban Chakraborty, <strong>Manaar Alam</strong>, Vishal Dey, Anupam Chattopadhyay, and Debdeep Mukhopadhyay, 
+                    <em>"A Survey on Adversarial Attacks and Defences."</em> 
+                    In IET CAAI Transactions on Intelligence Technology <strong>(IET TRIT)</strong>, 
+                    Volume 6, Issue 1, March 2021, Pages 25-45. <a href="https://www.linkedin.com/posts/tom-dodds-bb975a1a4_iet-openaccess-oa-activity-6879747460948901888-tfDt" class="hover:underline" target="_blank"><strong>[Honorable Mention for Most Downloaded Paper of the Year]</strong></a>
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cit2.12028" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j7]</span>
+                  <div>
+                    Anirban Chakraborty, Sarani Bhattacharya, <strong>Manaar Alam</strong>, Sikhar Patranabis, and Debdeep Mukhopadhyay, 
+                    <em>"RASSLE: Return Address Stack based Side-channel LEakage."</em> 
+                    In IACR Transactions on Cryptographic Hardware and Embedded Systems <strong>(IACR TCHES)</strong>, 
+                    Volume 2021, Issue 2, February 2021, Pages 275-303.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://tches.iacr.org/index.php/TCHES/article/view/8795" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j6]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Sarani Bhattacharya, and Debdeep Mukhopadhyay, 
+                    <em>"Victims can be Saviors: A Machine Learning based detection for Micro-Architectural Side-Channel Attacks."</em> 
+                    In ACM Journal on Emerging Technologies in Computing Systems <strong>(ACM JETC)</strong>, 
+                    Volume 17, Issue 2, January 2021, Pages 14:1-14:31.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/10.1145/3439189" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2020'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j5]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Debdeep Mukhopadhyay, Sai Praveen Kadiyala, Siew-Kei Lam, and Thambipillai Srikanthan, 
+                    <em>"Improving Accuracy of HPC-based Malware Classification for Embedded Platforms using Gradient Descent Optimization."</em> 
+                    In Springer Journal of Cryptographic Engineering <strong>(Springer JCEN)</strong>, 
+                    Volume 10, Issue 4, November 2020, Pages 289-303.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/article/10.1007/s13389-020-00232-9" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j4]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Arnab Bag, Debapriya Basu Roy, Dirmanto Jap, Jakub Breier, Shivam Bhasin, and Debdeep Mukhopadhyay, 
+                    <em>"Neural Network-based Inherently Fault-tolerant Hardware Cryptographic Primitives without Explicit Redundancy Checks."</em> 
+                    In ACM Journal on Emerging Technologies in Computing Systems <strong>(ACM JETC)</strong>, 
+                    Volume 17, Issue 1, September 2020, Pages 3:1-3:30.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/10.1145/3409594" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j3]</span>
+                  <div>
+                    Sai Praveen Kadiyala, <strong>Manaar Alam</strong>, Yash Shrivastava, Sikhar Patranabis, Muhamed Fauzi Bin Abbas, Arnab Biswas, Debdeep Mukhopadhyay, and Thambipillai Srikanthan, 
+                    <em>"LAMBDA: Lightweight Assessment of Malware for emBeddeD Architectures."</em> 
+                    In ACM Transactions on Embedded Computing Systems <strong>(ACM TECS)</strong>, 
+                    Volume 19, Issue 4, June 2020, Pages 23:1-23:31.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://dl.acm.org/doi/10.1145/3390855" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2019'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j2]</span>
+                  <div>
+                    <strong>Manaar Alam</strong>, Sarani Bhattacharya, Sayan Sinha, Chester Rebeiro, and Debdeep Mukhopadhyay, 
+                    <em>"IPA: An Instruction Profiling based Micro-Architectural Side-Channel Attack on Block Ciphers."</em> 
+                    In Springer Journal of Hardware and Systems Security <strong>(Springer HASS)</strong>, 
+                    Volume 3, Issue 1, March 2019, Pages 26-44.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://link.springer.com/article/10.1007/s41635-018-0060-3" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+            <template x-if="year === '2018'">
+              <ul class="space-y-2 text-justify">
+                <li class="flex hover:bg-gray-200 p-2 rounded transition">
+                  <span class="shrink-0 w-16 text-pink-800 font-semibold mr-3">[j1]</span>
+                  <div>
+                    Debapriya Basu Roy, <strong>Manaar Alam</strong>, Sarani Bhattacharya, Vidya Govindan, Francesco Regazzoni, Rajat Subhra Chakraborty, and Debdeep Mukhopadhyay, 
+                    <em>"Customized Instructions for Protection Against Memory Integrity Attacks."</em> 
+                    In IEEE Embedded Systems Letters <strong>(IEEE ESL)</strong>, 
+                    Volume 10, Issue 3, September 2018, Pages 91-94.
+                    <br />
+                      <span class="text text-gray-600">
+                        <i class="fa-solid fa-file-lines text-red-600 mr-1"></i>
+                        <a href="https://ieeexplore.ieee.org/document/8341734" class="text-red-600 hover:underline" target="_blank">[Paper]</a>
+                      </span>
+                  </div>
+                </li>
+              </ul>
+            </template>
+
+
+          </div>
+        </div>
+      </template>
+    </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 border-t border-gray-700">
+    <div class="max-w-5xl w-full mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="font-semibold">&copy; Manaar Alam</p>
+      <p class="text-gray-400 mt-2 md:mt-0">Last updated July 2025</p>
+    </div>
+  </footer>
+</body>
+
+</html>

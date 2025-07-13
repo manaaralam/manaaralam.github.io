@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Manaar Alam</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans leading-relaxed tracking-wide min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto py-6 px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Manaar Alam</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="publications.html" class="text-gray-300 hover:text-white transition">Publications</a>
+        <a href="awards.html" class="text-gray-300 hover:text-white transition">Recognition</a>
+        <a href="talks.html" class="text-gray-300 hover:text-white transition">Talks</a>
+        <a href="teaching.html" class="text-gray-300 hover:text-white transition">Teaching</a>
+        <a href="services.html" class="text-white font-bold">Services</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white transition">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-5xl mx-auto px-4 py-12 space-y-10 text-justify" x-data="{ sections: {} }">
+
+    <!-- Community Service -->
+<div id="community-service" class="rounded-2xl p-6 bg-gray-50 shadow-md border-l-4 border-yellow-600 hover:shadow-lg transition duration-300">
+  <h2 class="text-xl font-semibold mb-4 flex items-center space-x-2">
+    <i class="fa fa-users text-yellow-600"></i>
+    <span>Community Service and Outreach</span>
+  </h2>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-yellow-200">
+    <h3 class="text-yellow-600 font-semibold mb-3 flex items-center">
+      <i class="fa fa-calendar mr-2"></i>
+      Organization of National and International Events
+    </h3>
+
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>
+        <strong>BioHack 3D workshop and hackathon</strong> in the <em>Cyber Security Awareness Week (CSAW) 2024</em> at NYU Abu Dhabi, UAE 
+        (in collaboration with the Computer Science and Engineering Departments at Indian Institute of Technology Kanpur, 
+        Indian Institute of Technology Kharagpur, and Indian Institute of Technology Guwahati), 
+        <span class="text-sm text-gray-600">November 2024</span>.</p>
+      </li>
+
+      <li>
+        <strong>Middle East and North Africa Cyber Security Seminar Series</strong>, <em>New York University Abu Dhabi</em>, UAE, <span class="text-sm text-gray-600">September 2023 to May 2024</span>.</p>
+      </li>
+
+      <li>
+        <strong>International Conference on Applied Cryptography and Network Security (ACNS)</strong>, <em>Abu Dhabi</em>, UAE, <span class="text-sm text-gray-600">March 2024</span>.</p>
+      </li>
+
+      <li>
+        <strong>Workshop on Cyber Physical System Security</strong>, <em>Indian Institute of Technology Kharagpur</em>, India, <span class="text-sm text-gray-600">December 2019</span>.</p>
+      </li>
+
+      <li>
+        <strong>Workshop on Advanced Side-Channel Evaluation of Hardware Security</strong>, <em>Indian Institute of Technology Kharagpur</em>, India, <span class="text-sm text-gray-600">July 2018</span>.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- Professional Service -->
+<div class="rounded-2xl p-6 bg-gray-50 shadow-md border-l-4 border-blue-800 hover:shadow-lg transition duration-300 space-y-6">
+  <h2 class="text-xl font-semibold mb-4 flex items-center space-x-2">
+    <i class="fa fa-briefcase text-blue-800"></i>
+    <span>Professional Service</span>
+  </h2>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-blue-200">
+    <h3 class="text-blue-800 font-semibold mb-2 flex items-center">
+      <i class="fa fa-circle-user mr-2"></i> Program Committee Member
+    </h3>
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>IACR Conference on Cryptographic Hardware and Embedded Systems <strong>(CHES)</strong>: 2026</li>
+      <li>AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>: 2023, 2024, 2025, 2026</li>
+      <li>ACM ASIA Conference on Computer and Communications Security <strong>(AsiaCCS)</strong>: 2025</li>
+      <li>International Conference on VLSI Design <strong>(VLSID)</strong>: 2024, 2025</li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-blue-200">
+    <h3 class="text-blue-800 font-semibold mb-2 flex items-center">
+      <i class="fa fa-gavel mr-2"></i> Session Chair
+    </h3>
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>International Conference on Applied Cryptography and Network Security <strong>(ACNS)</strong>: 2024</li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-blue-200">
+    <h3 class="text-blue-800 font-semibold mb-2 flex items-center">
+      <i class="fa fa-book mr-2"></i> Journal Reviewer
+    </h3>
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems <strong>(TCAD)</strong></li>
+      <li>IEEE Transactions on Computers <strong>(TC)</strong></li>
+      <li>IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong></li>
+      <li>IEEE Transactions on Very Large Scale Integration Systems <strong>(TVLSI)</strong></li>
+      <li>IEEE Embedded System Letters <strong>(ESL)</strong></li>
+      <li>IEEE Transactions on Artificial Intelligence <strong>(TAI)</strong></li>
+      <li>ACM Transactions on Embedded Computing Systems <strong>(TECS)</strong></li>
+      <li>ACM Journal on Emerging Technologies in Computing Systems <strong>(JETC)</strong></li>
+      <li>Springer Journal of Cryptographic Engineering <strong>(JCEN)</strong></li>
+      <li>Springer Journal of Hardware and Systems Security <strong>(HASS)</strong></li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-blue-200">
+    <h3 class="text-blue-800 font-semibold mb-2 flex items-center">
+      <i class="fa fa-external-link mr-2"></i> External Conference Reviewer
+    </h3>
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>International Conference on Learning Representations <strong>(ICLR)</strong></li>
+      <li>International Conference on Machine Learning <strong>(ICML)</strong></li>
+      <li>Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong></li>
+      <li>ACM Conference on Computer and Communications Security <strong>(CCS)</strong></li>
+      <li>The Network and Distributed System Security Symposium <strong>(NDSS)</strong></li>
+      <li>IEEE Symposium on Security and Privacy <strong>(S&amp;P)</strong></li>
+      <li>USENIX Security Symposium <strong>(USENIX Security)</strong></li>
+      <li>IACR Conference on Cryptographic Hardware and Embedded Systems <strong>(CHES)</strong></li>
+      <li>IEEE International Symposium on High-Performance Computer Architecture <strong>(HPCA)</strong></li>
+      <li>ACM/IEEE Design Automation Conference <strong>(DAC)</strong></li>
+      <li>ACM/IEEE International Conference on Computer-Aided Design <strong>(ICCAD)</strong></li>
+      <li>IEEE Design, Automation and Test in Europe Conference <strong>(DATE)</strong></li>
+      <li>IEEE/IFIP Conference on Very Large Scale Integration <strong>(VLSI-SoC)</strong></li>
+      <li>Smart Card Research and Advanced Application Conference <strong>(CARDIS)</strong></li>
+      <li>IEEE International Conference on Trust, Security and Privacy in Computing and Communications <strong>(TrustCom)</strong></li>
+      <li>International Conference on Security, Privacy, and Applied Cryptographic Engineering <strong>(SPACE)</strong></li>
+      <li>Asian Hardware Oriented Security and Trust Symposium <strong>(AsianHOST)</strong></li>
+      <li>International Conference on Cryptology in India <strong>(Indocrypt)</strong></li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl p-4 shadow-sm border border-blue-200">
+    <h3 class="text-blue-800 font-semibold mb-2 flex items-center">
+      <i class="fa fa-external-link mr-2"></i> External Workshop Reviewer
+    </h3>
+    <ul class="list-disc pl-6 space-y-1 md:columns-2 gap-x-8">
+      <li>International Workshop on Constructive Side-Channel Analysis and Secure Design <strong>(COSADE)</strong></li>
+      <li>ACM Cyber-Physical System Security Workshop <strong>(CPSS)</strong></li>
+      <li>IEEE Workshop on Offensive Technologies <strong>(WOOT)</strong></li>
+      <li>EMNLP Workshop on NLP for Positive Impact <strong>(NLP4PI)</strong></li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 border-t border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="font-semibold">&copy; Manaar Alam</p>
+      <p class="text-gray-400 mt-2 md:mt-0">Last updated: July 2025</p>
+    </div>
+  </footer>
+</body>
+</html>

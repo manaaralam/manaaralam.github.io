@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talks | Manaar Alam</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans leading-relaxed tracking-wide min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-900 shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl w-full mx-auto py-6 px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Manaar Alam</h1>
+      <nav class="space-x-6 font-medium">
+        <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
+        <a href="publications.html" class="text-gray-300 hover:text-white transition">Publications</a>
+        <a href="awards.html" class="text-gray-300 hover:text-white transition">Recognition</a>
+        <a href="talks.html" class="text-white font-bold">Talks</a>
+        <a href="teaching.html" class="text-gray-300 hover:text-white transition">Teaching</a>
+        <a href="services.html" class="text-gray-300 hover:text-white transition">Services</a>
+        <a href="contact.html" class="text-gray-300 hover:text-white transition">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="flex-grow max-w-5xl mx-auto px-4 py-12 space-y-10 text-justify">
+  <section class="grid gap-6">
+    
+    <!-- Talk Card -->
+    <div class="flex items-start space-x-4 border rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition duration-300">
+      <div class="pt-1">
+        <i class="fa fa-microphone text-2xl text-indigo-600"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">
+          Trust is an Illusion: When Backdoors Turn AI Against You
+        </h3>
+        <p class="text-gray-700">
+          <span class="italic">Workshop on Machine Learning and Hardware Security</span>
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          Indian Institute Technology Kharagpur, India
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          <span class="text-gray-500">March 2025</span>
+        </p>
+        <div x-data="{ open: false }" class="mt-2 text-sm text-gray-700">
+          <div @click="open = !open"
+              class="flex items-center gap-1 text-indigo-600 hover:underline cursor-pointer select-none">
+            <svg :class="{ 'rotate-90': open }"
+                class="w-4 h-4 transform transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5"
+                    d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span>Abstract</span>
+          </div>
+          <div x-show="open" x-transition.duration.300ms class="mt-2 overflow-hidden">
+            <p>Backdoor attacks enable adversaries to implant hidden triggers in machine learning models, causing targeted malicious behavior while maintaining normal performance. These attacks pose serious security risks in applications ranging from autonomous systems to financial decision-making. However, detecting backdoors is challenging due to intellectual property (IP) protections that restrict access to model internals, limiting forensic analysis. This talk will explore a detection strategy based on system profiling, analyzing execution characteristics such as memory usage, CPU activity, and cache behavior to identify anomalies without requiring direct model inspection. Backdoor attacks in federated learning (FL) present additional challenges, as decentralized training prevents adversaries from exerting direct control over the global model, while aggregation naturally weakens malicious updates. This talk will examine how adversaries can overcome these challenges by strategically reinforcing backdoors across multiple training rounds to ensure persistence despite aggregation. Furthermore, we will explore a stealth technique that allows adversaries to selectively remove backdoors to evade detection and reintroduce them later, making traditional defenses ineffective. The discussion will highlight the evolving nature of backdoor threats and the need for robust countermeasures in both centralized and federated learning environments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for each talk -->
+    <div class="flex items-start space-x-4 border rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition duration-300">
+      <div class="pt-1">
+        <i class="fa fa-microphone text-2xl text-indigo-600"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">
+          Double-Edged Sword of Backdoor Attacks in Federated Learning: Persistent Injection and Stealthy Removal
+        </h3>
+        <p>
+          <span class="italic">Middle East and North Africa Cyber Security Seminar Series</span>
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          New York University Abu Dhabi, UAE
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          <span class="text-gray-500">October 2023</span>
+          <br>
+          <span class="italic">The Grove School of Engineering</span>
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          City University of New York, USA
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          <span class="text-gray-500">July 2023</span>
+        </p>
+        <div x-data="{ open: false }" class="mt-2 text-sm text-gray-700">
+          <div @click="open = !open"
+              class="flex items-center gap-1 text-indigo-600 hover:underline cursor-pointer select-none">
+            <svg :class="{ 'rotate-90': open }"
+                class="w-4 h-4 transform transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5"
+                    d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span>Abstract</span>
+          </div>
+          <div x-show="open" x-transition.duration.300ms class="mt-2 overflow-hidden">
+            <p>Federated Learning (FL) enables multiple participants to train deep learning models collaboratively without exposing sensitive personal data. However, its distributed nature and unvetted data expose it to the potential threat of backdoor attacks. Adversaries exploit this vulnerability to inject malicious functionality into the centralized model during training, causing intentional misclassifications for specific adversary-chosen inputs. In this talk, we delve into the dual aspects of a backdoor attack: its creation and subsequent removal when deemed necessary by the adversary. The first facet pertains to a method of persistent-by-construction backdoor injection developed for FL. It leverages adversarial perturbation and selectively targets specific parameters of the centralized model. However, the persistent nature of these backdoors can be double-edged, prompting prevention measures. Hence, it is critical for adversaries to remove these backdoors either after the successful achievement of their intended objectives or in response to suspected detection attempts. In view of this, the second facet of our discussion extends the concept of machine unlearning to effectively remove these persistent backdoors from the centralized model. It outlines strategies to maintain the performance of the centralized model and prevent over-unlearning of information unrelated to backdoor patterns, enhancing the stealth of adversaries during backdoor removal. Collectively, these two strategies create a dynamic and flexible adversarial approach to backdoor attacks and removal in the context of FL.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-start space-x-4 border rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition duration-300">
+      <div class="pt-1">
+        <i class="fa fa-microphone text-2xl text-indigo-600"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">
+          Artificial Intelligence in Security: Potential to Make and Break a Secure Connected World
+        </h3>
+        <p>
+          <span class="italic">35th International Conference on VLSI Design (VLSID)</span>
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          Virtual
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          <span class="text-gray-500">February 2022</span>
+          <br>
+          Co-speaker: <span class="text-gray-600"><a href="https://sites.google.com/view/debdeepmukhopadhyay/" target="_blank">Prof. Debdeep Mukhopadhyay</a></span>
+        </p>
+        <div x-data="{ open: false }" class="mt-2 text-sm text-gray-700">
+          <div @click="open = !open"
+              class="flex items-center gap-1 text-indigo-600 hover:underline cursor-pointer select-none">
+            <svg :class="{ 'rotate-90': open }"
+                class="w-4 h-4 transform transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5"
+                    d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span>Abstract</span>
+          </div>
+          <div x-show="open" x-transition.duration.300ms class="mt-2 overflow-hidden">
+            <p>In this part of the talk, we provide a detailed overview on both the boon and bane of AI on Security. To be more specific we start with describing how Machine Learning (ML)/Deep Learning (DL) can be leveraged to perform advanced side channel attacks on cryptographic implementations. Subsequently, we present deep learning based methodologies for  leakage assessment due to fault attacks on crypto-devices. We further present a state-of-the-art overview on the threats of machine learning in modeling Physically Unclonable Functions (PUFs), a promising hardware security primitive. Subsequently, we look at the opportunities from DL based methods in developing effective diagnostic tools for powerful malwares. We present case-studies on using Performance Counter based approaches in detecting menacing threats like ransomware and rowhammer attacks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-start space-x-4 border rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition duration-300">
+      <div class="pt-1">
+        <i class="fa fa-microphone text-2xl text-indigo-600"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">
+          In-situ Extraction of Randomness from Computer Architecture
+        </h3>
+        <p>
+          <span class="italic">Workshop on Cyber Physical System Security</span>
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          Indian Institute Technology Kharagpur, India
+          <span class="mx-1 text-gray-500">&#8226;</span>
+          <span class="text-gray-500">December 2019</span>
+        </p>
+        <div x-data="{ open: false }" class="mt-2 text-sm text-gray-700">
+          <div @click="open = !open"
+              class="flex items-center gap-1 text-indigo-600 hover:underline cursor-pointer select-none">
+            <svg :class="{ 'rotate-90': open }"
+                class="w-4 h-4 transform transition-transform duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5"
+                    d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span>Abstract</span>
+          </div>
+          <div x-show="open" x-transition.duration.300ms class="mt-2 overflow-hidden">
+            <p>True Random Number Generators (TRNGs) are one of the most crucial components in the design and use of cryptographic protocols and communication. Predictability of such random numbers are catastrophic and can lead to the complete collapse of security, as all the mathematical proofs are based on the entropy of the source which generates these bit patterns. The randomness in the TRNGs is hugely attributed to the inherent noise of the system, which is often derived from hardware subsystems operating in an ambiguous manner. However, most of these solutions need an add-on device to provide these randomness sources, which can lead to not only latency issues but also can be a potential target of adversaries by probing such an interface. In this talk, we will see how to alleviate these issues by proposing an in-situ TRNG construction, which depends on the functioning of the underlying hardware architecture. These functions are observed via the Hardware Performance Counters (HPCs) and are shown to exhibit high-quality randomness in the least significant bit positions. We provide extensive experiments to research on the choice of the HPCs, and their ability to pass the standard NIST and AIS 20/31 Tests. We also analyze a possible scenario where an adversary tries to interfere with the HPC values and show its effect on the TRNG output with respect to the NIST and AIS 20/31 Tests. Additionally, to alleviate the delay caused for accessing the HPC events and increase the throughput of the random-source, we also propose a methodology to cascade the random numbers from the HPC values with a secured hash function.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-start space-x-4 border rounded-2xl shadow-md p-6 bg-gray-50 hover:shadow-lg transition duration-300">
+      <div class="pt-1">
+        <i class="fa fa-microphone text-2xl text-indigo-600"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-1">
+          Early Detection of Anomaly using Side-Channel: Statistics and Learning
+        </h3>
+        <p class="text-gray-700 flex flex-wrap items-center gap-2">
+          <span class="italic">Workshop on Advanced Side Channel Evaluation of Hardware Security</span>
+          <span class="mx-0.5 text-gray-500">&#8226;</span>
+          <span>Institute Technology Kharagpur, India</span>
+          <span class="mx-0.5 text-gray-500">&#8226;</span>
+          <span class="text-gray-500 whitespace-nowrap">July&nbsp;2018</span>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 border-t border-gray-700">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="font-semibold">&copy; Manaar Alam</p>
+      <p class="text-gray-400 mt-2 md:mt-0">Last updated: July 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
